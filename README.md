@@ -14,12 +14,14 @@ A basic model we can use for both frontend validation and before save
 validation.
 
 ```clojure
-[:map
- [:user/id {:primary-key true} uuid?]
- [:user/email
-  [:re {:error/message "Invalid email"} #".+@.+\..+"]]
- [:user/password {:before-save [:bcrypt]} [:string {:min 6}]]
- [:user/password-confirmation {:virtual true} [:string {:min 6}]]]
+(gungnir.model/register!
+ {:user
+  [:map
+   [:user/id {:primary-key true} uuid?]
+   [:user/email
+    [:re {:error/message "Invalid email"} #".+@.+\..+"]]
+   [:user/password {:before-save [:bcrypt]} [:string {:min 6}]]
+   [:user/password-confirmation {:virtual true} [:string {:min 6}]]]})
 
 (defn password-match? [m]
   (= (:user/password m)
