@@ -75,10 +75,16 @@ messages in the proper labels.
       (gungnir.changeset/changeset [:register/password-match?])))
 ```
 
+After the page has loaded, you will need to initialize Gungnir's form validation.
+
+
+```clojure
+(gungnir.ui.form/init)
+```
+
 The final result, with some styling.
 
-[form-validation](https://kwrooijen.github.io/gungnir/images/form-validation.gif)
-
+![form-validation](https://raw.githubusercontent.com/kwrooijen/gungnir.ui/master/assets/form-validation.gif)
 
 ## Author / License
 
