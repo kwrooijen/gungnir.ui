@@ -23,7 +23,7 @@ example would be to have a user registration form.
 
 ![form-validation](https://raw.githubusercontent.com/kwrooijen/gungnir.ui/master/assets/form-validation.gif)
 
-[Read more](file:///home/kwrooijen/Programming/Clojure/gungnir/docs/form.html)
+[Read more](https://kwrooijen.github.io/gungnir/form.html)
 
 ## Author / License
 
