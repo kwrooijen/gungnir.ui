@@ -69,5 +69,5 @@
 (defn init []
   (doseq [form (js/document.querySelectorAll "[data-gungnir-form]")]
     (add-form-validation-event-handler! form)
-    (doseq [^js child (.-elements form)]
+    (doseq [^js child (.getElementsByTagName form "input")]
       (add-focus-event-handler! child))))
