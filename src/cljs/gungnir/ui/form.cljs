@@ -1,5 +1,6 @@
 (ns gungnir.ui.form
   (:require
+   [cljs.tools.reader.edn :as edn]
    [gungnir.model]
    [malli.core :as m]))
 
@@ -63,7 +64,8 @@
         (set! (.-innerHTML el) (first (get (:changeset/errors changeset) k [""])))))))
 
 (defn add-form-validation-event-handler! [form]
-  (let [validation-k (keyword (get-attribute form "data-gungnir-form"))]
+  (let [validation-k (-> (get-attribute form "data-gungnir-form")
+                         (edn/read-string))]
     (.addEventListener form "input" #(validate-fields form validation-k))))
 
 (defn init []
