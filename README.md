@@ -16,8 +16,8 @@ Add the following dependencies to your `project.clj`
 
 ```clojure
 :dependencies [[kwrooijen/gungnir "0.0.1-xxxxxxxx.yyyyyy-z"]
-               [kwrooijen/gungnir.ui "0.0.1-xxxxxxxx.yyyyyy-z"]
-               ,,,]
+               [kwrooijen/gungnir.ui "0.0.1-xxxxxxxx.yyyyyy-z"]]
+```
 
 ## Form
 
